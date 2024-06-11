@@ -24,6 +24,8 @@
 get:
 vector.size()返回容器的长度
 */
+
+
 #include <iostream>
 #include <vector>
 
@@ -44,3 +46,6 @@ public:
     }
 };
 
+int main(){
+    return 0;
+}

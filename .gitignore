@@ -172,4 +172,7 @@ fabric.properties
 # https://plugins.jetbrains.com/plugin/8053-azure-toolkit-for-intellij
 .idea/**/azureSettings.xml
 
+cmake-build-debug
+CMakeList.txt
+ 
 # End of https://www.toptal.com/developers/gitignore/api/clion

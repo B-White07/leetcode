@@ -2,7 +2,6 @@
 * 描述：
  * https://leetcode.cn/problems/longest-substring-without-repeating-characters/description/
 */
-//暴力解
 /*
  * set<>：1数据插入时自动排序
  *      2不允许插入重复值
@@ -13,10 +12,6 @@
  * 删除：s.clear()清除所有     s.erase(it)删除迭代器所指位置    s.erase(begin,end)删除区间，返回下一个元素的迭代器  s.erase(value)按值删
  * 查找：s.find(value) 返回元素的迭代器
  * 统计：s.count(value)    只能是0/1
- *
- *
- * multiset<>：可以查重复的值
- * pair<type,type> p    创建对组，p.first p.second 访问第一个和第二个元素
  */
 #include <iostream>;
 #include "map";
@@ -45,23 +40,28 @@ using namespace std;
 //};
 
 //滑动窗口
+/*
+ * multiset<>：可以查重复的值
+ * pair<type,type> p    创建对组，p.first p.second 访问第一个和第二个元素
+ * max(value1,value2)   返回最大值，注意不要起和函数名字一样的变量名
+ */
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
-        int max = 0;
         unordered_map<char, int> um;
-        int left = 0;
-        for (int i = 0; i < s.size(); i++) {
-            if (um.find(s[i]) == um.end()) {
-                um.insert(pair<char, int>(s[i], i));
-            } else {
-                left = um[s[i]] + 1;
-                um.insert(pair<char, int>(s[i], i));
-                um.size() - left + 1 > max ? max = um.size() - left + 1 : max;
+        int maxlen = 0,left = 0;    //left记录窗口左端位置
+        int i =0;   //记录窗口末端位置
+
+        for (i = 0; i < s.size(); i++) {
+            if (um.find(s[i]) != um.end()) {    //map中有当前字符，说明窗口中的子串已经最大，要找下一个了
+                maxlen = max(i - left, maxlen);     //记录当前子串的最大长度
+                left = max(left, um[s[i]]+1);       //将窗口左端往后移。若仅left = um[s[i]] + 1,会导致left回溯，因此应取较大值。
             }
+            um[s[i]] = i;   //若当前字符是重复字符，就修改其value值；若不是重复字符，就将其插入map
+                                //若使用insert函数，有重复字符的时候插入不成功，还得删了再插，不如这个一举两得。
         }
-        um.size() - left + 1 > max ? max = um.size() - left + 1 : max;
-        return max;
+        maxlen = max(i - left, maxlen); //走到最后若是不重复的，需要再计算一下窗口大小。
+        return maxlen;
     }
 };
 

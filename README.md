@@ -36,7 +36,8 @@
             string& assign(const char* s)<br>
             string& assign(const char* s,int n)<br>
             string& assign(const string& s)<br>
-            string& assign(int n,char ch)</td>
+            string& assign(int n,char ch)
+            </td>
             <td>New York</td>
             <td>New York</td>
             <td>New York</td>
@@ -46,13 +47,15 @@
         </tr>
         <tr>
             <td>拼接</td>
+            <td>
             string& operator+=(const char* s)<br>
             string& operator+=(const string& s)<br>
             string& operator+=(const char ch)<br>
             string& append(const char* s)<br>
             string& append(const char* s,int n)<br>
             string& append(const string& s)<br>
-            string& append(const string& s,int pos,int n)<br>
+            string& append(const string& s,int pos,int n)
+            </td>
             <td>New York</td>
             <td>New York</td>
             <td>New York</td>

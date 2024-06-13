@@ -62,7 +62,16 @@
         </tr>
         <tr>
             <td>查找</td>
-            <td>28</td>
+            <td>
+            int find(const string& str,int pos=0) const<br>
+            int find(const char* s,int pos=0) const<br>
+            int find(const char* s,int pos,int n) const<br>
+            int find(const char c,int pos=0) const<br>
+            int rfind(const string& str,int pos=0) const<br>
+            int rfind(const string& str,int pos=0) const<br>
+            int rfind(const string& str,int pos=0) const<br>
+            int rfind(const string& str,int pos=0) const<br>
+            </td>
             <td>New York</td>
             <td>New York</td>
             <td>New York</td>
@@ -71,8 +80,11 @@
             <td>New York</td>
         </tr>
         <tr>
-            <td>求大小</td>
-            <td>28</td>
+            <td>替换</td>
+            <td>
+            string& replace(int pos,int n,const string& str)<br>
+            string& replace(int pos,int n,const char* s)
+            </td>
             <td>New York</td>
             <td>New York</td>
             <td>New York</td>

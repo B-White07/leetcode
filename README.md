@@ -19,7 +19,8 @@
             <td>构造函数（省略无参构造）</td>
             <td>string(const char* ch)<br>
             string(const string & str)<br>
-            string(int n,char c)</td>
+            string(int n,char c)
+            </td>
             <td>New York</td>
             <td>New York</td>
             <td>New York</td>
@@ -67,10 +68,10 @@
             int find(const char* s,int pos=0) const<br>
             int find(const char* s,int pos,int n) const<br>
             int find(const char c,int pos=0) const<br>
-            int rfind(const string& str,int pos=0) const<br>
-            int rfind(const string& str,int pos=0) const<br>
-            int rfind(const string& str,int pos=0) const<br>
-            int rfind(const string& str,int pos=0) const<br>
+            int rfind(const string& str,int pos=npos) const<br>
+            int rfind(const char* s,int pos=npos) const<br>
+            int rfind(const char* s,int pos,int n) const<br>
+            int rfind(const char c,int pos=0) const
             </td>
             <td>New York</td>
             <td>New York</td>
@@ -93,8 +94,38 @@
             <td>New York</td>
         </tr>
         <tr>
+            <td>比较</td>
+            <td>28
+            int compare(const string& s) const<br>
+            int compare(const char* s) const
+            </td>
+            <td>New York</td>
+            <td>New York</td>
+            <td>New York</td>
+            <td>New York</td>
+            <td>New York</td>
+            <td>New York</td>
+        </tr>
+        <tr>
+            <td>存取元素</td>
+            <td>
+            char& operator[](int pos)<br>
+            char& at(int pos)
+            </td>
+            <td>New York</td>
+            <td>New York</td>
+            <td>New York</td>
+            <td>New York</td>
+            <td>New York</td>
+            <td>New York</td>
+        </tr>
+        <tr>
             <td>插入</td>
-            <td>28</td>
+            <td>
+            string& insert(int pos,const char* s)<br>
+            string& insert(int pos,const string& str)<br>
+            string& insert(int pos,int n,char c)
+            </td>
             <td>New York</td>
             <td>New York</td>
             <td>New York</td>
@@ -104,7 +135,7 @@
         </tr>
         <tr>
             <td>删除</td>
-            <td>28</td>
+            <td>string& erase(int pos,int n = npos)</td>
             <td>New York</td>
             <td>New York</td>
             <td>New York</td>
@@ -113,28 +144,8 @@
             <td>New York</td>
         </tr>
         <tr>
-            <td>判空</td>
-            <td>28</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
-        </tr>
-        <tr>
-            <td>统计</td>
-            <td>28</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
-        </tr>
-        <tr>
-            <td>是否有序</td>
-            <td>28</td>
+            <td>子串获取</td>
+            <td>string substr(int pos=0,int n=npos) const</td>
             <td>New York</td>
             <td>New York</td>
             <td>New York</td>

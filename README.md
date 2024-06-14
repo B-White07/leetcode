@@ -195,10 +195,12 @@
             <td>size()</td>
             <td>size()</td>
             <td>size()</td>
+            <td>size()</td>
         </tr>
         <tr>
             <td>判空</td>
-            <td>28</td>
+            <td>empty()</td>
+            <td>empty()</td>
             <td>empty()</td>
             <td>empty()</td>
             <td>empty()</td>

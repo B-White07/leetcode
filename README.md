@@ -1,6 +1,6 @@
 # 记录一下做Leetcode题目的过程
 
-## STL常用容器方法（简化版）
+## STL常用容器方法（极简版）
 较为完整的PDF链接:[C++STL](https://bwhite.top/diy/file/Cpp.pdf)
 
 <table>
@@ -42,42 +42,6 @@
             list(int n,int elem)<br>
             list(const list& l)
             </td>
-            <td>New York</td>
-        </tr>
-        <tr>
-            <td>赋值</td>
-            <td>
-            string& operator=(const char* s)<br>
-            string& assign(const char* s)
-            </td>
-            <td>
-            vector& operator=(const vector& vec)<br>
-            assign(v.begin(),v.end())
-            </td>
-            <td>
-            deque& operator=(const deque& deq)<br>
-            assign(d.begin(),d.end())
-            </td>
-            <td>stack& operator=(const stack& stk)</td>
-            <td>queue& operator=(const queue& que)</td>
-            <td>
-            list& operator=(const list& l)<br>
-            assign(l.begin(),l.end())<br>
-            assign(int n,int elem)
-            </td>
-            <td>New York</td>
-        </tr>
-        <tr>
-            <td>拼接</td>
-            <td>
-            string& operator+=(const char* s)
-            string& append(const char* s)
-            </td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
             <td>New York</td>
         </tr>
         <tr>

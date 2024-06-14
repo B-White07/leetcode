@@ -138,7 +138,12 @@
             front()<br>
             back()
             </td>
-            <td>New York</td>
+            <td>
+            at(int idx)<br>
+            operator[]<br>
+            front()<br>
+            back()
+            </td>
             <td>New York</td>
             <td>New York</td>
             <td>New York</td>
@@ -180,7 +185,8 @@
             push_back(int elem)<br>
             push_front(int elem)<br>
             insert(const _iterator pos,int elem)<br>
-            insert(const _iterator pos,int n,int elem)
+            insert(const _iterator pos,int n,int elem)<br>
+            insert(const _iterator pos,d.begin(),d.end())
             </td>
             <td>New York</td>
             <td>New York</td>
@@ -210,7 +216,7 @@
             <td>清空</td>
             <td></td>
             <td>clear()</td>
-            <td>New York</td>
+            <td>clear()</td>
             <td>New York</td>
             <td>New York</td>
             <td>New York</td>

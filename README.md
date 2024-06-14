@@ -58,8 +58,8 @@
             <td>NO</td>
             <td>NO</td>
             <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
+            <td>s.find(value)</td>
+            <td>m.find(key)</td>
         </tr>
         <tr>
             <td>访问数据</td>

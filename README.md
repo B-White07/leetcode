@@ -174,16 +174,6 @@
             <td>New York</td>
         </tr>
         <tr>
-            <td>预留空间</td>
-            <td></td>
-            <td>reserve(int len)</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
-        </tr>
-        <tr>
             <td>插入</td>
             <td>
             string& insert(int pos,const char* s)<br>
@@ -248,13 +238,14 @@
         </tr>
         <tr>
             <td>是否允许重复</td>
-            <td>28</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
+            <td>OK</td>
+            <td>OK</td>
+            <td>OK</td>
+            <td>OK</td>
+            <td>OK</td>
+            <td>OK</td>
+            <td>NO<br>unordered_set OK</td>
+            <td>NO<br>unordered_map OK</td>
         </tr>
         <tr>
             <td>大小</td>
@@ -265,35 +256,6 @@
             <td>size()</td>
             <td>size()</td>
             <td>size()</td>
-        </tr>
-        <tr>
-            <td>容量</td>
-            <td>28</td>
-            <td>capacity()</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
-        </tr>
-        <tr>
-            <td>重新指定大小</td>
-            <td>28</td>
-            <td>
-            resize(int n)<br>
-            resize(int n,int elem)
-            </td>
-            <td>
-            resize(int n)<br>
-            resize(int n,int elem)
-            </td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>
-            resize(int n)<br>
-            resize(int n,int elem)
-            </td>
-            <td>New York</td>
         </tr>
         <tr>
             <td>判空</td>

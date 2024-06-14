@@ -43,6 +43,7 @@
             list(const list& l)
             </td>
             <td>New York</td>
+            <td>New York</td>
         </tr>
         <tr>
             <td>查找</td>
@@ -52,6 +53,7 @@
             int find(const char* s,int pos,int n) const<br>
             int find(const char c,int pos=0) const<br>
             </td>
+            <td>New York</td>
             <td>New York</td>
             <td>New York</td>
             <td>New York</td>
@@ -84,6 +86,7 @@
             </td>
             <td>New York</td>
             <td>New York</td>
+            <td>New York</td>
         </tr>
         <tr>
             <td>插入</td>
@@ -108,6 +111,7 @@
             <td>push(int elem)</td>
             <td>New York</td>
             <td>New York</td>
+            <td>New York</td>
         </tr>
         <tr>
             <td>删除</td>
@@ -127,6 +131,7 @@
             <td>pop()</td>
             <td>New York</td>
             <td>New York</td>
+            <td>New York</td>
         </tr>
         <tr>
             <td>清空</td>
@@ -138,6 +143,7 @@
             <td>clear()</td>
             <td>clear()</td>
             <td>clear()</td>
+            <td>New York</td>
         </tr>
         <tr>
             <td>是否允许重复</td>

@@ -29,7 +29,7 @@ public:
 /* begin()和end()都是迭代器，分别指向容器第一个位置和最后一个位置的下一个位置。迭代器可以暂时理解为指针
  * m.first就是m的key,m.second就是vlaue
  * map插入：m.insert(pair<int, int>(nums[i], i))
- *              也可以用map[key]=value的方式，map[key]=value也可以用于访问key的value
+ *              也可以用map[key]=value的方式，map[key]也可以用于访问key的value
  * map删除：m.erase(m.begin()) 删除第一个元素
  *              m.erase(key)    按照key删除
  *              m.erase(m.begin(),m.end())  按照区间删，这其实就是清空了，等价于m.clear()

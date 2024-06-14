@@ -109,8 +109,11 @@
             </td>
             <td>push(int elem)</td>
             <td>push(int elem)</td>
-            <td>New York</td>
-            <td>New York</td>
+            <td>insert(value)</td>
+            <td>
+            insert(pair<int, int>(nums[i], i))<br>
+            map[key]=value
+            </td>
             <td>New York</td>
         </tr>
         <tr>
@@ -130,8 +133,14 @@
             <td>pop()</td>
             <td>pop()</td>
             <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
+            <td>
+            erase(int value)<br>
+            erase(iterator)
+            </td>
+            <td>
+            erase(int key)<br>
+            erase(m.begin())
+            </td>
         </tr>
         <tr>
             <td>清空</td>

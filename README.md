@@ -55,8 +55,8 @@
             </td>
             <td>New York</td>
             <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
+            <td>NO</td>
+            <td>NO</td>
             <td>New York</td>
             <td>New York</td>
             <td>New York</td>

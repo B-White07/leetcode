@@ -109,12 +109,11 @@
             </td>
             <td>push(int elem)</td>
             <td>push(int elem)</td>
+            <td>New York</td>
             <td>insert(value)</td>
             <td>
             insert(pair<int, int>(nums[i], i))<br>
             map[key]=value
-            </td>
-            <td>New York</td>
         </tr>
         <tr>
             <td>删除</td>

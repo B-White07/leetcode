@@ -7,11 +7,12 @@
             <th></th>
             <th>string</th>
             <th>vector</th>
-            <th>set</th>
-            <th>map</th>
             <th>duque</th>
             <th>stack</th>
+            <th>queue</th>
             <th>list</th>
+            <th>set</th>
+            <th>map</th>
         </tr>
     </thead>
     <tbody>
@@ -32,8 +33,8 @@
             deque(int n,int elem)<br>
             deque(const deque& deq)
             </td>
-            <td>New York</td>
-            <td>New York</td>
+            <td>stack(const stack& stk)</td>
+            <td>stack(const queue& que)</td>
             <td>New York</td>
             <td>New York</td>
         </tr>
@@ -58,8 +59,8 @@
             assign(d.begin(),d.end())<br>
             assign(int n,int elem)
             </td>
-            <td>New York</td>
-            <td>New York</td>
+            <td>stack& operator=(const stack& stk)</td>
+            <td>queue& operator=(const queue& que)</td>
             <td>New York</td>
             <td>New York</td>
         </tr>
@@ -127,7 +128,7 @@
             <td>New York</td>
         </tr>
         <tr>
-            <td>存取元素</td>
+            <td>访问数据</td>
             <td>
             char& operator[](int pos)<br>
             char& at(int pos)
@@ -144,8 +145,11 @@
             front()<br>
             back()
             </td>
-            <td>New York</td>
-            <td>New York</td>
+            <td>top()</td>
+            <td>
+            back()<br>
+            front()
+            </td>
             <td>New York</td>
             <td>New York</td>
         </tr>
@@ -188,8 +192,8 @@
             insert(const _iterator pos,int n,int elem)<br>
             insert(const _iterator pos,d.begin(),d.end())
             </td>
-            <td>New York</td>
-            <td>New York</td>
+            <td>push(int elem)</td>
+            <td>push(int elem)</td>
             <td>New York</td>
             <td>New York</td>
         </tr>
@@ -207,14 +211,14 @@
             erase(const _iterator pos)<br>
             erase(const _iterator start,const _iterator end)
             </td>
-            <td>New York</td>
-            <td>New York</td>
+            <td>pop()</td>
+            <td>pop()</td>
             <td>New York</td>
             <td>New York</td>
         </tr>
         <tr>
             <td>清空</td>
-            <td></td>
+            <td>clear()</td>
             <td>clear()</td>
             <td>clear()</td>
             <td>New York</td>
@@ -247,10 +251,10 @@
             <td>size()</td>
             <td>size()</td>
             <td>size()</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
+            <td>size()</td>
+            <td>size()</td>
+            <td>size()</td>
+            <td>size()</td>
         </tr>
         <tr>
             <td>容量</td>
@@ -283,10 +287,10 @@
             <td>28</td>
             <td>empty()</td>
             <td>empty()</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
+            <td>empty()</td>
+            <td>empty()</td>
+            <td>empty()</td>
+            <td>empty()</td>
         </tr>
     </tbody>
 </table>

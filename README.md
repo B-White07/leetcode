@@ -48,22 +48,15 @@
             <td>赋值</td>
             <td>
             string& operator=(const char* s)<br>
-            string& operator=(const string& s)<br>
-            string& operator=(const char ch)<br>
-            string& assign(const char* s)<br>
-            string& assign(const char* s,int n)<br>
-            string& assign(const string& s)<br>
-            string& assign(int n,char ch)
+            string& assign(const char* s)
             </td>
             <td>
             vector& operator=(const vector& vec)<br>
-            assign(v.begin(),v.end())<br>
-            assign(int n,int elem)
+            assign(v.begin(),v.end())
             </td>
             <td>
             deque& operator=(const deque& deq)<br>
-            assign(d.begin(),d.end())<br>
-            assign(int n,int elem)
+            assign(d.begin(),d.end())
             </td>
             <td>stack& operator=(const stack& stk)</td>
             <td>queue& operator=(const queue& que)</td>
@@ -77,13 +70,8 @@
         <tr>
             <td>拼接</td>
             <td>
-            string& operator+=(const char* s)<br>
-            string& operator+=(const string& s)<br>
-            string& operator+=(const char ch)<br>
-            string& append(const char* s)<br>
-            string& append(const char* s,int n)<br>
-            string& append(const string& s)<br>
-            string& append(const string& s,int pos,int n)
+            string& operator+=(const char* s)
+            string& append(const char* s)
             </td>
             <td>New York</td>
             <td>New York</td>
@@ -99,36 +87,6 @@
             int find(const char* s,int pos=0) const<br>
             int find(const char* s,int pos,int n) const<br>
             int find(const char c,int pos=0) const<br>
-            int rfind(const string& str,int pos=npos) const<br>
-            int rfind(const char* s,int pos=npos) const<br>
-            int rfind(const char* s,int pos,int n) const<br>
-            int rfind(const char c,int pos=0) const
-            </td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
-        </tr>
-        <tr>
-            <td>替换</td>
-            <td>
-            string& replace(int pos,int n,const string& str)<br>
-            string& replace(int pos,int n,const char* s)
-            </td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
-        </tr>
-        <tr>
-            <td>比较</td>
-            <td>28
-            int compare(const string& s) const<br>
-            int compare(const char* s) const
             </td>
             <td>New York</td>
             <td>New York</td>
@@ -161,16 +119,6 @@
             front()
             </td>
             <td>New York</td>
-            <td>New York</td>
-        </tr>
-        <tr>
-            <td>互换容器</td>
-            <td></td>
-            <td>swap(vector& vec)</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td></td>
-            <td>swap(list& l)</td>
             <td>New York</td>
         </tr>
         <tr>
@@ -221,20 +169,11 @@
             <td>clear()</td>
             <td>clear()</td>
             <td>clear()</td>
+            <td>NO</td>
+            <td>NO</td>
             <td>clear()</td>
             <td>clear()</td>
             <td>clear()</td>
-            <td>clear()</td>
-        </tr>
-        <tr>
-            <td>子串获取</td>
-            <td>string substr(int pos=0,int n=npos) const</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
         </tr>
         <tr>
             <td>是否允许重复</td>
@@ -244,8 +183,8 @@
             <td>OK</td>
             <td>OK</td>
             <td>OK</td>
-            <td>NO<br>unordered_set OK</td>
-            <td>NO<br>unordered_map OK</td>
+            <td>NO<br>multiset OK</td>
+            <td>NO<br>multimap OK</td>
         </tr>
         <tr>
             <td>大小</td>

@@ -1,6 +1,8 @@
 # 记录一下做Leetcode题目的过程
 
 ## STL常用容器方法
+PDF链接:[C++STL](https://bwhite.top/diy/file/Cpp.pdf)
+
 <table>
     <thead>
         <tr>
@@ -229,10 +231,10 @@
             <td>clear()</td>
             <td>clear()</td>
             <td>clear()</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
+            <td>clear()</td>
+            <td>clear()</td>
+            <td>clear()</td>
+            <td>clear()</td>
         </tr>
         <tr>
             <td>子串获取</td>

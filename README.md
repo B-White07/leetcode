@@ -35,7 +35,11 @@
             </td>
             <td>stack(const stack& stk)</td>
             <td>stack(const queue& que)</td>
-            <td>New York</td>
+            <td>
+            list(l.begin(),l.end())<br>
+            list(int n,int elem)<br>
+            list(const list& l)
+            </td>
             <td>New York</td>
         </tr>
         <tr>
@@ -61,7 +65,11 @@
             </td>
             <td>stack& operator=(const stack& stk)</td>
             <td>queue& operator=(const queue& que)</td>
-            <td>New York</td>
+            <td>
+            list& operator=(const list& l)<br>
+            assign(l.begin(),l.end())<br>
+            assign(int n,int elem)
+            </td>
             <td>New York</td>
         </tr>
         <tr>
@@ -159,8 +167,8 @@
             <td>swap(vector& vec)</td>
             <td>New York</td>
             <td>New York</td>
-            <td>New York</td>
-            <td>New York</td>
+            <td></td>
+            <td>swap(list& l)</td>
             <td>New York</td>
         </tr>
         <tr>
@@ -279,7 +287,10 @@
             </td>
             <td>New York</td>
             <td>New York</td>
-            <td>New York</td>
+            <td>
+            resize(int n)<br>
+            resize(int n,int elem)
+            </td>
             <td>New York</td>
         </tr>
         <tr>

@@ -27,7 +27,11 @@
             vector(int n,int elem)<br>
             vector(const vector& vec)
             </td>
-            <td>New York</td>
+            <td>
+            deque(d.begin(),d.end())<br>
+            deque(int n,int elem)<br>
+            deque(const deque& deq)
+            </td>
             <td>New York</td>
             <td>New York</td>
             <td>New York</td>
@@ -49,7 +53,11 @@
             assign(v.begin(),v.end())<br>
             assign(int n,int elem)
             </td>
-            <td>New York</td>
+            <td>
+            deque& operator=(const deque& deq)<br>
+            assign(d.begin(),d.end())<br>
+            assign(int n,int elem)
+            </td>
             <td>New York</td>
             <td>New York</td>
             <td>New York</td>
@@ -168,7 +176,12 @@
             insert(const _iterator pos,int elem)<br>
             insert(const _iterator pos,int n,int elem)
             </td>
-            <td>New York</td>
+            <td>
+            push_back(int elem)<br>
+            push_front(int elem)<br>
+            insert(const _iterator pos,int elem)<br>
+            insert(const _iterator pos,int n,int elem)
+            </td>
             <td>New York</td>
             <td>New York</td>
             <td>New York</td>
@@ -182,7 +195,12 @@
             erase(const _iterator pos)<br>
             erase(const _iterator start,const _iterator end)
             </td>
-            <td>New York</td>
+            <td>
+            pop_back()<br>
+            pop_front()<br>
+            erase(const _iterator pos)<br>
+            erase(const _iterator start,const _iterator end)
+            </td>
             <td>New York</td>
             <td>New York</td>
             <td>New York</td>
@@ -220,9 +238,9 @@
         </tr>
         <tr>
             <td>大小</td>
-            <td>28</td>
             <td>size()</td>
-            <td>New York</td>
+            <td>size()</td>
+            <td>size()</td>
             <td>New York</td>
             <td>New York</td>
             <td>New York</td>
@@ -245,7 +263,10 @@
             resize(int n)<br>
             resize(int n,int elem)
             </td>
-            <td>New York</td>
+            <td>
+            resize(int n)<br>
+            resize(int n,int elem)
+            </td>
             <td>New York</td>
             <td>New York</td>
             <td>New York</td>
@@ -255,7 +276,7 @@
             <td>判空</td>
             <td>28</td>
             <td>empty()</td>
-            <td>New York</td>
+            <td>empty()</td>
             <td>New York</td>
             <td>New York</td>
             <td>New York</td>

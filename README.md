@@ -17,11 +17,16 @@
     <tbody>
         <tr>
             <td>构造函数（省略无参构造）</td>
-            <td>string(const char* ch)<br>
+            <td>
+            string(const char* ch)<br>
             string(const string & str)<br>
             string(int n,char c)
             </td>
-            <td>New York</td>
+            <td>
+            vector(v.begin(),v.end())<br>
+            vector(int n,int elem)<br>
+            vector(const vector& vec)
+            </td>
             <td>New York</td>
             <td>New York</td>
             <td>New York</td>
@@ -39,7 +44,11 @@
             string& assign(const string& s)<br>
             string& assign(int n,char ch)
             </td>
-            <td>New York</td>
+            <td>
+            vector& operator=(const vector& vec)<br>
+            assign(v.begin(),v.end())<br>
+            assign(int n,int elem)
+            </td>
             <td>New York</td>
             <td>New York</td>
             <td>New York</td>
@@ -115,7 +124,32 @@
             char& operator[](int pos)<br>
             char& at(int pos)
             </td>
+            <td>
+            at(int idx)<br>
+            operator[]<br>
+            front()<br>
+            back()
+            </td>
             <td>New York</td>
+            <td>New York</td>
+            <td>New York</td>
+            <td>New York</td>
+            <td>New York</td>
+        </tr>
+        <tr>
+            <td>互换容器</td>
+            <td></td>
+            <td>swap(vector& vec)</td>
+            <td>New York</td>
+            <td>New York</td>
+            <td>New York</td>
+            <td>New York</td>
+            <td>New York</td>
+        </tr>
+        <tr>
+            <td>预留空间</td>
+            <td></td>
+            <td>reserve(int len)</td>
             <td>New York</td>
             <td>New York</td>
             <td>New York</td>
@@ -129,7 +163,11 @@
             string& insert(int pos,const string& str)<br>
             string& insert(int pos,int n,char c)
             </td>
-            <td>New York</td>
+            <td>
+            push_back(int elem)<br>
+            insert(const _iterator pos,int elem)<br>
+            insert(const _iterator pos,int n,int elem)
+            </td>
             <td>New York</td>
             <td>New York</td>
             <td>New York</td>
@@ -139,7 +177,21 @@
         <tr>
             <td>删除</td>
             <td>string& erase(int pos,int n = npos)</td>
+            <td>
+            pop_back()<br>
+            erase(const _iterator pos)<br>
+            erase(const _iterator start,const _iterator end)
+            </td>
             <td>New York</td>
+            <td>New York</td>
+            <td>New York</td>
+            <td>New York</td>
+            <td>New York</td>
+        </tr>
+        <tr>
+            <td>清空</td>
+            <td></td>
+            <td>clear()</td>
             <td>New York</td>
             <td>New York</td>
             <td>New York</td>
@@ -160,6 +212,49 @@
             <td>是否允许重复</td>
             <td>28</td>
             <td>New York</td>
+            <td>New York</td>
+            <td>New York</td>
+            <td>New York</td>
+            <td>New York</td>
+            <td>New York</td>
+        </tr>
+        <tr>
+            <td>大小</td>
+            <td>28</td>
+            <td>size()</td>
+            <td>New York</td>
+            <td>New York</td>
+            <td>New York</td>
+            <td>New York</td>
+            <td>New York</td>
+        </tr>
+        <tr>
+            <td>容量</td>
+            <td>28</td>
+            <td>capacity()</td>
+            <td>New York</td>
+            <td>New York</td>
+            <td>New York</td>
+            <td>New York</td>
+            <td>New York</td>
+        </tr>
+        <tr>
+            <td>重新指定大小</td>
+            <td>28</td>
+            <td>
+            resize(int n)<br>
+            resize(int n,int elem)
+            </td>
+            <td>New York</td>
+            <td>New York</td>
+            <td>New York</td>
+            <td>New York</td>
+            <td>New York</td>
+        </tr>
+        <tr>
+            <td>判空</td>
+            <td>28</td>
+            <td>empty()</td>
             <td>New York</td>
             <td>New York</td>
             <td>New York</td>

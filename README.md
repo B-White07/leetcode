@@ -143,7 +143,6 @@
             <td>clear()</td>
             <td>clear()</td>
             <td>clear()</td>
-            <td>New York</td>
         </tr>
         <tr>
             <td>是否允许重复</td>

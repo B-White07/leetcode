@@ -19,33 +19,6 @@
     </thead>
     <tbody>
         <tr>
-            <td>构造函数（省略无参构造）</td>
-            <td>
-            string(const char* ch)<br>
-            string(const string & str)<br>
-            string(int n,char c)
-            </td>
-            <td>
-            vector(v.begin(),v.end())<br>
-            vector(int n,int elem)<br>
-            vector(const vector& vec)
-            </td>
-            <td>
-            deque(d.begin(),d.end())<br>
-            deque(int n,int elem)<br>
-            deque(const deque& deq)
-            </td>
-            <td>stack(const stack& stk)</td>
-            <td>stack(const queue& que)</td>
-            <td>
-            list(l.begin(),l.end())<br>
-            list(int n,int elem)<br>
-            list(const list& l)
-            </td>
-            <td>New York</td>
-            <td>New York</td>
-        </tr>
-        <tr>
             <td>查找</td>
             <td>
             int find(const string& str,int pos=0) const<br>

@@ -26,8 +26,8 @@
             int find(const char* s,int pos,int n) const<br>
             int find(const char c,int pos=0) const<br>
             </td>
-            <td>New York</td>
-            <td>New York</td>
+            <td></td>
+            <td></td>
             <td>NO</td>
             <td>NO</td>
             <td>New York</td>

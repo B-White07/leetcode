@@ -9,11 +9,9 @@
  * };
  *
  * 描述：
-https://leetcode.cn/problems/add-two-numbers/description/
-
-get：C++结构体和类很相似，有构造函数，可以有成员函数。C中结构体没有成员函数和构造函数。
- *
+ * https://leetcode.cn/problems/add-two-numbers/description/
  */
+//C++结构体和类很相似，有构造函数，可以有成员函数。C中结构体没有成员函数和构造函数。
 
 class Solution {
 public:

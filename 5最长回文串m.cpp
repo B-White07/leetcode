@@ -68,10 +68,19 @@ string longestPalindrome(string s) {
             }
         }
     }
+
+    //看一下dp数组，非必要
+    for(auto row = dp.begin();row!=dp.end();row++){
+        for(auto col=row->begin();col!=row->end();col++){
+            cout << *col;
+        }
+        cout << endl;
+    }
     return s.substr(begin, maxlen);
 }
 
 int main() {
     cout << longestPalindrome("babad");
+
     return 0;
 }

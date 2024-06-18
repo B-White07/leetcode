@@ -10,7 +10,7 @@ public:
         int high = nums.size() - 1;
 
         while (low <= high) {
-            int index = low + (high - low) / 2;//避免溢出，效果等同于index=(low+high)/2
+            int index = low + (high - low) / 2;//避免low+high溢出的潜在问题，效果等同于index=(low+high)/2
             if (nums[index] < target) {
                 low = index + 1;
             } else if (nums[index] > target) {

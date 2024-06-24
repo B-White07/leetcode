@@ -8,6 +8,8 @@
  *      remove()
  *
  * iterator库：使用迭代器
+ *
+ * 删除数组是逻辑上的删除，而且删以后要把后边的元素往前移动保证删除元素后的数组空间连续
  */
 class Solution {
 public:

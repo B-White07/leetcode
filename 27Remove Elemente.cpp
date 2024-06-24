@@ -43,7 +43,7 @@ public:
 class Solution {
 public:
     int removeElement(vector<int>& nums, int val) {
-        int left = 0, right = 0;    //right找要删除的元素，left是删除掉目标元素以后的数组的末位置
+        int left = 0, right = 0;    //right找要新数组的元素，left是删除掉目标元素以后的新数组的末位置
         while (left < nums.size() && right < nums.size()) {
             if (nums[right] != val)
                 nums[left++] = nums[right]; //初始l和r均为0，此处不会使数组变化；以后运行到这了表示找到了不等于要删除的元素的下一个元素

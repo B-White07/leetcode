@@ -15,7 +15,7 @@ class Solution {
 public:
     int removeElement(vector<int>& nums, int val) {
         auto it = remove(nums.begin(),nums.end(),val);  //remove是一种逻辑上的删除，只是将val放到容器的末尾，返回新的容器的结尾的迭代器。
-        nums.erase(it,nums.end());  //删除目标元素
+        nums.erase(it,nums.end());  //删除目标元素，erase()时间复杂度是O(n),本题其实就是erase的实现
         return nums.size(); //大小就是个数了
     }
 };

@@ -33,7 +33,7 @@ public:
         vector<int> ans(nums.size());
         int index = nums.size() - 1;    //从最后一个位置开始放
 
-        for (int i = 0, j = nums.size() - 1; i <= j; --index) {
+        for (int i = 0, j = nums.size() - 1; i <= j;) { //i=j的时候是最后一个元素，也要处理，放到新数组中。    for的第三部分可以为空
             if (nums[i] * nums[i] < nums[j] * nums[j]) {    //哪个大把哪个放进新数组
                 ans[index] = nums[j] * nums[j];
                 --j;
@@ -41,6 +41,7 @@ public:
                 ans[index] = nums[i] * nums[i];
                 ++i;
             }
+            --index;
         }
 
         return ans;

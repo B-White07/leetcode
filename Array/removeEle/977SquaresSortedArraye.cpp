@@ -23,6 +23,7 @@ public:
 };
 
 //双指针
+//只需要遍历一边数组，O(n)
 class Solution {
 public:
     vector<int> sortedSquares(vector<int>& nums) {

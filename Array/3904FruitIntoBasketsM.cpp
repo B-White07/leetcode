@@ -11,7 +11,7 @@ public:
 
         int left = 0, ans = 0;  //left指向窗口左边界，ans保存符合条件的窗口的最大长度
         for (int right = 0; right < fruits.size(); ++right) {
-            ++mmap[fruits[right]];  //以fruits[right]作为键，找到同类型的树就将对应的值++
+            ++mmap[fruits[right]];  //以fruits[right]作为键，找到同类型的树就将对应的值++.若第一次查找不存在，插入后将value初始化为0，然后+1.
             while (mmap.size() > 2) {   //篮子满了，需要腾一个空位，即移除一个类型
                 auto it = mmap.find(fruits[left]);  //找到左窗口的类型，并移除。注意每次移除的可能不是同一种类型
                 --it->second;

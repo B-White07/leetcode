@@ -29,7 +29,7 @@
     auto it = myMap.find(2); //返回指向指定键的元素的迭代器，如果未找到，则返回 end 迭代器。
     myMap.count(2); //返回指定键的元素个数，对于 std::map 和 std::unordered_map，返回值为 0 或 1。
     
-    // 使用 find 查找键为 2 的元素
+    // 使用 find 查找键为 2 的元素.map和unordered_map只会返回第一个找到的元素
     auto it = myMultimap.find(2);
     if (it != myMultimap.end()) {
         std::cout << "Found: " << it->first << " -> " << it->second << std::endl;

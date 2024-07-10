@@ -50,3 +50,32 @@ public:
             return s.substr(start, ans);
     }
 };
+
+//滑动窗口，更简单
+class Solution {
+public:
+    string minWindow(string s, string t) {
+        unordered_map<char, int> hs, ht;
+        for (auto it : t)
+            ht[it]++;
+
+        string ans;
+        for (int right = 0, left = 0, cnt = 0; right < s.size(); right++) {
+            // 添加当前字符，更新有效字符数量
+            if (++hs[s[right]] <= ht[s[right]])
+                cnt++;
+
+            // j 向前移动，去除冗余字符
+            while (left <= right && hs[s[left]] > ht[s[left]])
+                --hs[s[left++]];
+
+            // 完全覆盖，更新 ans
+            if (cnt == t.length()) {
+                if (ans.empty() || ans.length() > right - left + 1) {
+                    ans = s.substr(left, right - left + 1);
+                }
+            }
+        }
+        return ans;
+    }
+};

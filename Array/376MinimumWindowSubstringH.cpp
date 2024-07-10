@@ -63,9 +63,9 @@ public:
         for (int right = 0, left = 0, cnt = 0; right < s.size(); right++) {
             // 添加当前字符，更新有效字符数量
             if (++hs[s[right]] <= ht[s[right]])
-                cnt++;
+                cnt++;  //cnt和上一种解法的match不一样，match是不重复字符的匹配个数，cnt是所有字符的匹配个数。若目标串为ABBC，则满足条件时match=3而cnt=4
 
-            // j 向前移动，去除冗余字符
+            // left 向前移动，去除冗余字符
             while (left <= right && hs[s[left]] > ht[s[left]])
                 --hs[s[left++]];
 

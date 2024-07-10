@@ -6,7 +6,7 @@
 class Solution {
 public:
     vector<vector<int>> generateMatrix(int n) {
-        vector<vector<int>> ans(n, vector<int>(n, 0));
+        vector<vector<int>> ans(n, vector<int>(n, 0));  //需要初始化，否则按下标访问会出错
 
         int startx = 0, starty = 0; //每层循环的起点坐标
         int lap = 0, offset = 1;    //lap记录循环多少圈，offset相当于记录右边开区间的位置

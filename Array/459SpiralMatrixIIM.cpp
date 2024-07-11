@@ -36,12 +36,12 @@ public:
     vector<vector<int>> generateMatrix(int n) {
         vector<vector<int>> ans(n, vector<int>(n, 0));
 
-        int l = 0, r = n - 1, t = 0, b = n - 1;
+        int l = 0, r = n - 1, t = 0, b = n - 1; //l-left r-right t-top b-bottom记录每一圈的边界
         int cnt = 1;
-        while (cnt <= n * n) {
+        while (cnt <= n * n) {  //=可以处理奇数最中间的点
             for (int j = l; j <= r; ++j)
                 ans[t][j] = cnt++;
-            ++t;
+            ++t;    //赋值完一行就移动边界，防止下一个循环重复赋值
             for (int i = t; i <= b; ++i)
                 ans[i][r] = cnt++;
             --r;

@@ -10,11 +10,12 @@ public:
         vector<int> ans;
 
         int l = 0, t = 0, r = matrix[0].size() - 1, b = matrix.size() - 1;
+        //注意这四个是边界，l=0表示当前应该处理[i][0]的元素 r=n-1表示当前应该处理[i][n-1].t和b同理
 
         while (1) {
             for (int j = l; j <= r; j++)
                 ans.push_back(matrix[t][j]);
-            if (++t > b)
+            if (++t > b)    //t=b，此时上下边界相等，表示以此为边界的所有元素还没有处理，应该被处理
                 break;
             for (int i = t; i <= b; i++)
                 ans.push_back(matrix[i][r]);

@@ -13,6 +13,34 @@
 ## STL常用容器方法
 完整PDF链接:[C++STL](https://bwhite.top/diy/file/Cpp.pdf)
 
+### vector
+题目：146
+
+```cpp
+//初始化
+    vector<int> vec;//这样初始化的vec是空的，不能直接用vec[]的方式访问和赋值，需要用push_back赋值
+    vector<int> vec(size,default);//这样初始化了一个大小为size的全为default的vec
+    
+//容量相关
+    resize(size_type count)// 改变 vector 的大小为 count，如果新大小大于当前大小，则用默认值或给定值填充新的元素。
+    size()//当前元素数量。
+	capacity()//当前分配的内存可以容纳的最大元素数量。由于vector会自动分配内存，如果vec中原来只分配了5个单位内存，且都有数据了，此时size()==capacity().
+	                                         //若现在又向vec中添加了一个元素，size()==6而capacity()应该是大于6的，因为内存的分配往往不是一次只分配一个。
+
+//元素访问
+    front()// 访问第一个元素。
+	back()// 访问最后一个元素。
+
+//修改
+    push_back(const T& value)// 在末尾添加一个元素。
+	pop_back()//删除最后一个元素。
+	insert(iterator pos, const T& value)//在指定位置插入元素。
+	erase(iterator pos)//移除指定位置的元素。
+	clear()//清除所有元素，容器大小变为 0。
+```
+
+
+
 ### map
 题目：904
 

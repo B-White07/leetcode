@@ -41,3 +41,41 @@ public:
         return head;
     }
 };
+
+//添加一个头节点，这样原头节点就可以和普通节点一样处理
+class Solution {
+public:
+    ListNode* removeElements(ListNode* head, int val) {
+        ListNode* h = new ListNode(0, head);    //新添加一个头节点
+        ListNode *p = h, *q = h;
+
+        while (p != nullptr) {
+            while (p->val != val) {
+                q = p;
+                p = p->next;
+                if (p == nullptr)
+                    return h->next;
+            }
+            q->next = p->next;
+            p = p->next;
+        }
+        return h->next;
+    }
+};
+
+//递归
+class Solution {
+public:
+    ListNode* removeElements(ListNode* head, int val) {
+        if (head == nullptr)    //递归出口
+            return head;
+
+        head->next = removeElements(head->next,val);
+
+        if (head->val == val)   //头节点值为val，则返回下一个节点
+            return head->next;
+        else
+            return head;
+
+    }
+};

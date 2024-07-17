@@ -39,3 +39,22 @@ public:
         return head;
     }
 };
+
+//双指针：从第一个节点开始，以此将节点的指针指向前边的节点
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+        ListNode* cur = head;   //当前要变换指针的节点
+        ListNode* pre = nullptr;    //cur要指向的元素，其实是链表头
+        ListNode* tmp = cur;    //记录cur下一个节点的位置
+
+        while (cur != nullptr) {
+            tmp = cur->next;
+            cur->next = pre;
+            pre = cur;
+            cur = tmp;
+        }
+
+        return pre; //pre就是新链表的第一个节点
+    }
+};

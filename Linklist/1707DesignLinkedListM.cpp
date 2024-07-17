@@ -71,7 +71,7 @@ public:
         LinkNode* tmp = cur->next;  //用tmp记录被删掉的节点，需要释放掉
         cur->next = tmp->next;
         delete tmp; //这会释放掉tmp指向的内存空间，但并不会释放掉tmp本身，tmp会随机指向一个地方
-        tmp == nullptr; //所以要将tmp置空，防止野指针
+        tmp = nullptr; //所以要将tmp置空，防止野指针
         --size;
     }
 };

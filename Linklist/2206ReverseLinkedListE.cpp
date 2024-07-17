@@ -17,7 +17,7 @@
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
-        if (head == nullptr || head->next == nullptr)
+        if (head == nullptr)
             return head;
 
         ListNode* h = new ListNode(0, head);    //你个头节点，方便操作

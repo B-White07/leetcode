@@ -79,3 +79,57 @@ public:
         return reverse(nullptr, head);  //初始化递归参数：初始pre为null,cur为head
     }
 };
+
+//递归，不创建新函数
+/*
+ * 1 -> 2 -> 3 -> 4 -> 5
+ * |   stack top  |
+ * | head=nullptr |
+ * |    head=5    | 5
+ * |    head=4    | 4
+ * |    head=3    | 3
+ * |    head=2    | 2
+ * |    head=1    | 1
+ * | stack bottom |
+ *
+ * 1st pop:head == 5;
+ * 5: return 5;
+ *
+ * 2nd pop:head == 4;
+ * 4:newHead = 5;
+ * 4:1->2->3->4<->5newHead
+ * 4:1->2->3->4<-5newHead
+ * 4:return 5;
+ *
+ * 3rd pop:head == 3;
+ * 3:newHead = 5;
+ * 3:1->2->3<->4<-5newHead
+ * 3:1->2->3<-4<-5newHead
+ * 3:return 5;
+ *
+ * 4nd pop:head == 2;
+ * 2:newHead = 5;
+ * 2:1->2<->3<->4<-5newHead
+ * 2:1->2<-3<->4<-5newHead
+ * 2:return 5;
+ *
+ * 5nd pop:head == 1;
+ * 1:newHead = 5
+ * 1:1<->2<-3<-4<-5newHead
+ * 1:1<-2<-3<-4<-5newHead
+ * 1:return 5;
+ *
+ */
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+        if (head == nullptr || head->next == nullptr)   //递归出口
+            return head;
+
+        ListNode* newHead = reverseList(head->next);    //保存新的头节点，其实就是原链表的尾节点
+        head->next->next = head;
+        head->next = nullptr;
+
+        return newHead; //返回新链表的头节点
+    }
+};

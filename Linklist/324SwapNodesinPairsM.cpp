@@ -26,9 +26,11 @@ public:
 
         while (cur && cur->next) {  //cur为空自然不必继续交换了；cur->next为空则只剩cur，也不必交换了
             ListNode* tmp = cur->next->next;    //记录下一次cur的位置
+            //交换节点
             cur->next->next = cur;
             pre->next = cur->next;
             cur->next = tmp;
+
             pre = cur;  //当前的cur就是下一次的pre
             cur = tmp;  //cur前移
         }

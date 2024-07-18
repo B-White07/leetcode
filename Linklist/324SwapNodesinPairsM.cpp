@@ -43,3 +43,17 @@ public:
     }
 };
 
+//递归
+
+class Solution {
+public:
+    ListNode* swapPairs(ListNode* head) {
+        if (!head || !head->next)   //空链表或者递归到只剩一个节点，则退出递归
+            return head;
+
+        ListNode* nhead = head->next;
+        head->next = swapPairs(nhead->next);
+        nhead->next = head;
+        return nhead;
+    }
+};

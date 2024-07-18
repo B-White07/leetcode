@@ -58,3 +58,24 @@ public:
         return pre; //pre就是新链表的第一个节点
     }
 };
+
+//递归：递归和while循环是有对应关系的：循环体内做的事情就是单次递归要做的事情+传递下次递归参数。递归出口就是循环判断条件
+class Solution {
+public:
+    ListNode* reverse(ListNode* pre, ListNode* cur) {
+        if (cur == nullptr) //递归出口
+            return pre;
+
+        //每次递归做的事：首先记录cur下一个节点的位置；然后将cur的指针指向pre，这就是每次递归内做的所有事情。而更新pre和cur的位置应该作为下次递归的参数传递
+        ListNode* tmp = cur->next;
+        cur->next = pre;
+
+        //更新下次递归的参数
+        return reverse(cur, tmp);
+    }
+
+
+    ListNode* reverseList(ListNode* head) {
+        return reverse(nullptr, head);  //初始化递归参数：初始pre为null,cur为head
+    }
+};

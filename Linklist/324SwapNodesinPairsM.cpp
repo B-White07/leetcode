@@ -51,9 +51,12 @@ public:
         if (!head || !head->next)   //空链表或者递归到只剩一个节点，则退出递归
             return head;
 
-        ListNode* nhead = head->next;
-        head->next = swapPairs(nhead->next);
-        nhead->next = head;
-        return nhead;
+        //一下三步完成了交换
+        //这里有三个节点：nhead,head和nhead->next
+        ListNode* nhead = head->next;   //两两一组，记录新的头节点
+        head->next = swapPairs(nhead->next);    //传nhead->next而不是nhead，这保证了奇数的时候会直接返回nhead->next，也就是不做交换
+        nhead->next = head; //新头指向旧头
+
+        return nhead;   //返回新表头
     }
 };

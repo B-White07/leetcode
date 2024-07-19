@@ -49,3 +49,34 @@ public:
         return head;
     }
 };
+
+//double pointer
+class Solution {
+public:
+    ListNode* removeNthFromEnd(ListNode* head, int n) {
+        ListNode* vhead = new ListNode(0, head);
+        ListNode* pre = vhead;  //point to the front of target
+        ListNode* flag = vhead; //the distance between pre and flag is n,and then when flag->next == null; pre->next is the target
+
+        while (n--)
+            flag = flag->next;
+
+        while (flag->next) {    //find the target
+            pre = pre->next;
+            flag = flag->next;
+        }
+
+        ListNode* tmp = pre->next;  //save the space of target
+
+        pre->next = pre->next->next;    //delete target in logic
+
+        delete tmp; //delete the space of target
+        tmp = nullptr;
+
+        head = vhead->next;
+        delete vhead;
+        vhead = nullptr;
+
+        return head;
+    }
+};

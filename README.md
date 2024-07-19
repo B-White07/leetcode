@@ -48,8 +48,8 @@
 
 ```Cpp
 //插入
-    myMap.insert({1, "one"});
-    myMap[2] = "two";//仅map和unordered_map可以使用，因为键唯一
+    myMap.insert({1, "one"}); //只会在键不存在时插入新键值对，如果键已经存在，插入操作会失败，不会更新值。
+    myMap[2] = "two";//仅map和unordered_map可以使用，因为键唯一.  会在键存在时更新值，在键不存在时插入新键值对。
     myMap.emplace(3, "three");
     
     

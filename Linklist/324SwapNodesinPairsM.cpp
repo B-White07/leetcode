@@ -49,6 +49,7 @@ class Solution {
 public:
     ListNode* swapPairs(ListNode* head) {
         if (!head || !head->next)   //空链表或者递归到只剩一个节点，则退出递归
+                                    //这里保证了如果是奇数个节点，则不做处理。巧妙
             return head;
 
         //一下三步完成了交换

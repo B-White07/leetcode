@@ -59,3 +59,31 @@ public:
         return nullptr;
     }
 };
+
+//what the fuck
+/*
+ * suppose ListA's len is a.ListB's len is b. ListC1 = listA + listB. ListC2 = ListB + listA.
+ * the public part's len is c.
+ * cura go through listA first and then go through listB.
+ * curb go through listB first and then go through listA.
+ * so finally,cura and curb stop at a+(b-c)==b+(a-c)
+ * if c = 0,crua == curb == null (the all go a+b steps,from the first of list,so stop at the next Node(null) of C1(C2) not the end of C1(C2))
+ * else cura == curb == the intersection
+ */
+class Solution {
+public:
+    ListNode* getIntersectionNode(ListNode* headA, ListNode* headB) {
+        if (!headA || !headB)
+            return nullptr;
+
+        ListNode* cura = headA;
+        ListNode* curb = headB;
+
+        while (cura != curb) {
+            cura = cura == nullptr ? headB : cura->next;    //if cura = cura->next == nullptr ? headB : cura->next;
+                                                        //when the two haven't intersection,the while-loop whill run timeless.
+            curb = curb == nullptr ? headA : curb->next;
+        }
+        return cura;
+    }
+};

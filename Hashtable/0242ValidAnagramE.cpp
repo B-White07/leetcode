@@ -62,7 +62,7 @@ bool isAnagram(string s, string t) {
         ans[ch]--;
         if (ans[ch] < 0)    //super intelligent! maybe you would think if s has a char comes up 4 times,but in t,it is 3.so it should be false.
                 //but ans[a] will never < 0,so it would never return false!
-                //But the comparison is based on the size between s and t is equal.so if a char in a comes up more than it in t,there is always
+                //But the comparison is based on the size between s and t is equal.so if a char in s comes up more than it in t,there will be always
                     //some other chars in t can result ans[t] < 0.
             return false;
     }

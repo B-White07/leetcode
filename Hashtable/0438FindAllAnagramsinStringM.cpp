@@ -9,7 +9,7 @@
 using namespace std;
 
 //exceeding time limit.holy shit I always get this.
-bool isAnagrams(string s, string t) {
+/*bool isAnagrams(string s, string t) {
     if (s.size() != t.size())
         return false;
 
@@ -44,5 +44,36 @@ vector<int> findAnagrams(string s, string p) {
     }
 
     return ans;
+}*/
+
+//sliding window
+vector<int> findAnagrams(string s, string p) {
+    if (s.size() < p.size())
+        return {};
+
+    vector<int> sCnt(26, 0), pCnt(26, 0);
+    vector<int> ans;
+    int left = 0, right = 0;
+
+    for (const auto& ch : p) {
+        pCnt[ch - 'a']++;
+    }
+
+    while (right < s.size()) {
+        //sCnt[s[right] - 'a']++;
+        if (right - left + 1 == p.size()) {
+            if (sCnt == pCnt)
+                ans.push_back(left);
+            sCnt[s[left++] - 'a']--;
+        }
+        sCnt[s[right++] - 'a']++;
+        //++right;
+    }
+
+    return ans;
 }
 
+int main(){
+    cout<<"test CMake";
+    return 0;
+}

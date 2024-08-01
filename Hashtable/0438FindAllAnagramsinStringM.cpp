@@ -51,23 +51,23 @@ vector<int> findAnagrams(string s, string p) {
     if (s.size() < p.size())
         return {};
 
-    vector<int> sCnt(26, 0), pCnt(26, 0);
-    vector<int> ans;
-    int left = 0, right = 0;
+    vector<int> sCnt(26, 0), pCnt(26, 0);   //count how many times different letters comes up
+    vector<int> ans;    //store answer
+    int left = 0, right = 0;    //window's border
 
-    for (const auto& ch : p) {
-        pCnt[ch - 'a']++;
+    for (const auto& ch : p) {  //count times different letters appear in p
+        pCnt[ch - 'a']++;   //'a' - 'a' == 0; 'b' - 'a' == 1
     }
 
     while (right < s.size()) {
-        //sCnt[s[right] - 'a']++;
-        if (right - left + 1 == p.size()) {
+        sCnt[s[right] - 'a']++;
+        if (right - left + 1 == p.size()) { //if size of window is equal to p,judge if they are anagram
             if (sCnt == pCnt)
                 ans.push_back(left);
-            sCnt[s[left++] - 'a']--;
+            sCnt[s[left++] - 'a']--;    //only the size of window and p is equal,left need move.and corresponding letter's times should -1
         }
-        sCnt[s[right++] - 'a']++;
-        //++right;
+//        sCnt[s[right++] - 'a']++;
+        ++right;    //every time the right should move.
     }
 
     return ans;

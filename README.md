@@ -9,6 +9,9 @@
 每个题目名称的最后一个字母代表对应leetcode的难度。E表示easy、M表示middle、H表示hard.<br>
 如"1844BackspaceStringCompareE.cpp"表示1区中的题目，对应leetcode的844题，难度为Easy.<br>
 
+---
+为了简化结构，上述命名方式从hashtable后便不再使用，仅用`leetcod序号+难度`命名文件。
+
 
 ## STL常用容器方法
 完整PDF链接:[C++STL](https://bwhite.top/diy/file/Cpp.pdf)
